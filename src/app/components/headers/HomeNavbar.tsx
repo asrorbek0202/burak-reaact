@@ -32,7 +32,8 @@ export function HomeNavbar() {
           ) : null}
           {authMember ?(
             <Box className ={"hover-line"}>
-              <NavLink to="/member-page" activeClassName={"underline"}>My Page</NavLink>
+              <NavLink to="/member-page" activeClassName={"underline"}>My Page
+              </NavLink>
           </Box>
           ) : null}
             <Box className ={"hover-line"}>
