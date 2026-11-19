@@ -4,12 +4,16 @@ import Basket from "./Basket";
 import React, { useState, useEffect } from "react";
 import { CartItem } from "../../../lib/types/search";
 
-interface OtherNavbarProps {
+interface HomeNavbarProps {
   cartItems: CartItem[];
+  onAdd: (item: CartItem) => void;
+  onRemove: (item: CartItem) => void;
+  onDelete: (item: CartItem) => void;
+  onDeleteAll: () => void;
 }
 
 export default function HomeNavbar(props: HomeNavbarProps) {
-  const { cartItems } = props;
+  const { cartItems, onAdd, onRemove, onDelete, onDeleteAll} = props;
   const authMember = null;
   const [count, setCount] = useState<number>(0);
   const [value, setvalue] = useState<boolean>(true);
@@ -65,7 +69,12 @@ export default function HomeNavbar(props: HomeNavbarProps) {
             <Box className ={"hover-line"}>
             <NavLink to="/help" activeClassName={"underline"}>Help</NavLink>
           </Box>
-          <Basket cartItems={cartItems}/>
+          <Basket 
+                      cartItems={cartItems}
+                      onAdd = {onAdd}
+                      onRemove={onRemove}
+                      onDelete={onDelete}
+                      onDeleteAll={onDeleteAll}/>
 
           {!authMember ? (
             <Box>
