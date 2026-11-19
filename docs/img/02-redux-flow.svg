@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" width="980" height="360" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+<rect width="980" height="360" rx="14" fill="#0f172a"/>
+<text x="490.0" y="34" fill="#f1f5f9" font-size="20" font-weight="700" text-anchor="middle">2-rasm. Redux: yozuvchi va o'quvchi</text>
+<rect x="20" y="80" width="170" height="80" rx="10" fill="#3b82f6" fill-opacity=".18" stroke="#3b82f6" stroke-width="2"/><text x="105.0" y="118.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">HomePage</text><text x="105.0" y="136.0" fill="#cbd5e1" font-size="12" text-anchor="middle">YOZADI (dispatch)</text>
+<rect x="225" y="80" width="170" height="80" rx="10" fill="#10b981" fill-opacity=".18" stroke="#10b981" stroke-width="2"/><text x="310.0" y="118.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">slice.ts</text><text x="310.0" y="136.0" fill="#cbd5e1" font-size="12" text-anchor="middle">reducer: state'ni o'zgartiradi</text>
+<rect x="430" y="80" width="170" height="80" rx="10" fill="#f59e0b" fill-opacity=".18" stroke="#f59e0b" stroke-width="2"/><text x="515.0" y="118.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">store.ts</text><text x="515.0" y="136.0" fill="#cbd5e1" font-size="12" text-anchor="middle">barcha slice'lar yig'indisi</text>
+<rect x="635" y="80" width="150" height="80" rx="10" fill="#a78bfa" fill-opacity=".18" stroke="#a78bfa" stroke-width="2"/><text x="710.0" y="118.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">selector.ts</text><text x="710.0" y="136.0" fill="#cbd5e1" font-size="12" text-anchor="middle">store'dan o'qiydi</text>
+<rect x="810" y="80" width="150" height="80" rx="10" fill="#ec4899" fill-opacity=".18" stroke="#ec4899" stroke-width="2"/><text x="885.0" y="118.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">NewDishes</text><text x="885.0" y="136.0" fill="#cbd5e1" font-size="12" text-anchor="middle">O'QIYDI (useSelector)</text>
+<path d="M190 120L223 120" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M395 120L428 120" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M600 120L633 120" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M785 120L808 120" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<text x="105" y="190" fill="#93c5fd" font-size="12" text-anchor="middle" font-weight="400">setNewDishes(data)</text>
+<text x="310" y="190" fill="#6ee7b7" font-size="12" text-anchor="middle" font-weight="400">action.payload -> state</text>
+<text x="515" y="190" fill="#fcd34d" font-size="12" text-anchor="middle" font-weight="400">{ homePage: {...} }</text>
+<text x="710" y="190" fill="#c4b5fd" font-size="12" text-anchor="middle" font-weight="400">retrieveNewDishes</text>
+<text x="490" y="255" fill="#f1f5f9" font-size="14" text-anchor="middle" font-weight="600">HomePage va NewDishes bir-birini BILMAYDI. Ikkalasi faqat store bilan gaplashadi.</text>
+<text x="490" y="285" fill="#cbd5e1" font-size="13" text-anchor="middle" font-weight="400">Store o'zgarsa -> useSelector ishlatgan komponent AVTOMATIK qayta chiziladi.</text>
+<text x="490" y="325" fill="#fbbf24" font-size="13" text-anchor="middle" font-weight="400">initialState: newDishes = []  ->  (fetch tugaydi)  ->  newDishes = [4 ta taom]</text>
+<circle r="8" fill="#fbbf24"><animateMotion dur="6s" begin="0s" repeatCount="indefinite" path="M105 120L310 120L515 120L710 120L885 120"/></circle>
+</svg>

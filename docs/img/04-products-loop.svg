@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 430" width="980" height="430" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+<rect width="980" height="430" rx="14" fill="#0f172a"/>
+<text x="490.0" y="34" fill="#f1f5f9" font-size="20" font-weight="700" text-anchor="middle">4-rasm. Products sahifasi: filtr -> so'rov -> ekran (aylana)</text>
+<rect x="40" y="80" width="220" height="70" rx="10" fill="#ec4899" fill-opacity=".18" stroke="#ec4899" stroke-width="2"/><text x="150.0" y="113.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">Foydalanuvchi bosadi</text><text x="150.0" y="131.0" fill="#cbd5e1" font-size="12" text-anchor="middle">Dessert / Price / Search / sahifa</text>
+<rect x="380" y="80" width="220" height="70" rx="10" fill="#3b82f6" fill-opacity=".18" stroke="#3b82f6" stroke-width="2"/><text x="490.0" y="113.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">setProductSearch({...})</text><text x="490.0" y="131.0" fill="#cbd5e1" font-size="12" text-anchor="middle">yangi obyekt -> state o'zgardi</text>
+<rect x="720" y="80" width="220" height="70" rx="10" fill="#a78bfa" fill-opacity=".18" stroke="#a78bfa" stroke-width="2"/><text x="830.0" y="113.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">useEffect([productSearch])</text><text x="830.0" y="131.0" fill="#cbd5e1" font-size="12" text-anchor="middle">bog'liqlik o'zgardi -> ishga tushadi</text>
+<rect x="720" y="280" width="220" height="70" rx="10" fill="#f59e0b" fill-opacity=".18" stroke="#f59e0b" stroke-width="2"/><text x="830.0" y="313.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">ProductService.getProducts</text><text x="830.0" y="331.0" fill="#cbd5e1" font-size="12" text-anchor="middle">?order&amp;page&amp;limit&amp;productCollection</text>
+<rect x="380" y="280" width="220" height="70" rx="10" fill="#10b981" fill-opacity=".18" stroke="#10b981" stroke-width="2"/><text x="490.0" y="313.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">setProducts(data)</text><text x="490.0" y="331.0" fill="#cbd5e1" font-size="12" text-anchor="middle">Redux store yangilanadi</text>
+<rect x="40" y="280" width="220" height="70" rx="10" fill="#ec4899" fill-opacity=".18" stroke="#ec4899" stroke-width="2"/><text x="150.0" y="313.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">Products qayta chiziladi</text><text x="150.0" y="331.0" fill="#cbd5e1" font-size="12" text-anchor="middle">products.map(...) kartalar</text>
+<path d="M260 115L378 115" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M600 115L718 115" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M830 150L830 278" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M720 315L602 315" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M380 315L262 315" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M150 280L150 152" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<circle r="8" fill="#fbbf24"><animateMotion dur="8s" begin="0s" repeatCount="indefinite" path="M150 115L490 115L830 115L830 315L490 315L150 315L150 115"/></circle>
+<text x="490" y="400" fill="#cbd5e1" font-size="12" text-anchor="middle" font-weight="400">Muhim: {...productSearch} yangi obyekt yaratadi. React eski va yangi obyektni solishtiradi va farq bo'lsa useEffect'ni ishga tushiradi.</text>
+</svg>

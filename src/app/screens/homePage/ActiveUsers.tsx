@@ -3,19 +3,20 @@ import Card from "@mui/joy/Card";
 import { CssVarsProvider, Typography } from "@mui/joy";
 import CardOverflow from "@mui/joy/CardOverflow";
 import AspectRatio from "@mui/joy/AspectRatio";
-
 import { useSelector } from "react-redux";
 import { createSelector } from "reselect";
 import { retrieveTopUsers } from "./selector";
-import { Member } from "../../../lib//types/member";
 import { serverApi } from "../../../lib/config";
+import { Member } from "../../../lib/types/member";
 
+// REDUX SLICE & SELECTOR
 const topUsersRetriever = createSelector(retrieveTopUsers, (topUsers) => ({
   topUsers,
 }));
 
 export default function ActiveUsers() {
   const { topUsers } = useSelector(topUsersRetriever);
+
   return (
     <div className={"active-users-frame"}>
       <Container>

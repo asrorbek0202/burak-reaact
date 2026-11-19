@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" width="980" height="420" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+<rect width="980" height="420" rx="14" fill="#0f172a"/>
+<text x="490.0" y="34" fill="#f1f5f9" font-size="20" font-weight="700" text-anchor="middle">3-rasm. Routing: URL qaysi sahifani ochadi</text>
+<rect x="30" y="65" width="200" height="42" rx="10" fill="#3b82f6" fill-opacity=".18" stroke="#3b82f6" stroke-width="2"/><text x="130.0" y="91.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">/</text>
+<rect x="700" y="65" width="250" height="42" rx="10" fill="#ec4899" fill-opacity=".18" stroke="#ec4899" stroke-width="2"/><text x="825.0" y="91.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">HomePage</text>
+<path d="M232 86L420 86L420 215L470 215" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M570 215L585 215L585 86L698 86" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="30" y="117" width="200" height="42" rx="10" fill="#3b82f6" fill-opacity=".18" stroke="#3b82f6" stroke-width="2"/><text x="130.0" y="143.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">/products</text>
+<rect x="700" y="117" width="250" height="42" rx="10" fill="#ec4899" fill-opacity=".18" stroke="#ec4899" stroke-width="2"/><text x="825.0" y="143.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">ProductsPage</text>
+<path d="M232 138L420 138L420 215L470 215" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M570 215L585 215L585 138L698 138" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="30" y="169" width="200" height="42" rx="10" fill="#3b82f6" fill-opacity=".18" stroke="#3b82f6" stroke-width="2"/><text x="130.0" y="195.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">/products/:id</text>
+<rect x="700" y="169" width="250" height="42" rx="10" fill="#ec4899" fill-opacity=".18" stroke="#ec4899" stroke-width="2"/><text x="825.0" y="195.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">ChosenProduct</text>
+<path d="M232 190L420 190L420 215L470 215" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M570 215L585 215L585 190L698 190" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="30" y="221" width="200" height="42" rx="10" fill="#3b82f6" fill-opacity=".18" stroke="#3b82f6" stroke-width="2"/><text x="130.0" y="247.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">/orders</text>
+<rect x="700" y="221" width="250" height="42" rx="10" fill="#ec4899" fill-opacity=".18" stroke="#ec4899" stroke-width="2"/><text x="825.0" y="247.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">OrdersPage</text>
+<path d="M232 242L420 242L420 215L470 215" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M570 215L585 215L585 242L698 242" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="30" y="273" width="200" height="42" rx="10" fill="#3b82f6" fill-opacity=".18" stroke="#3b82f6" stroke-width="2"/><text x="130.0" y="299.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">/member-page</text>
+<rect x="700" y="273" width="250" height="42" rx="10" fill="#ec4899" fill-opacity=".18" stroke="#ec4899" stroke-width="2"/><text x="825.0" y="299.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">UserPage</text>
+<path d="M232 294L420 294L420 215L470 215" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M570 215L585 215L585 294L698 294" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="30" y="325" width="200" height="42" rx="10" fill="#3b82f6" fill-opacity=".18" stroke="#3b82f6" stroke-width="2"/><text x="130.0" y="351.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">/help</text>
+<rect x="700" y="325" width="250" height="42" rx="10" fill="#ec4899" fill-opacity=".18" stroke="#ec4899" stroke-width="2"/><text x="825.0" y="351.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">HelpPage</text>
+<path d="M232 346L420 346L420 215L470 215" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M570 215L585 215L585 346L698 346" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="470" y="185" width="100" height="60" rx="10" fill="#a78bfa" fill-opacity=".18" stroke="#a78bfa" stroke-width="2"/><text x="520.0" y="213.0" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">Switch</text><text x="520.0" y="231.0" fill="#cbd5e1" font-size="12" text-anchor="middle">App.tsx</text>
+<text x="490" y="395" fill="#fbbf24" font-size="13" text-anchor="middle" font-weight="600">Navbar: location.pathname === "/"  ?  HomeNavbar  :  OtherNavbar        |        Footer har doim bor</text>
+</svg>

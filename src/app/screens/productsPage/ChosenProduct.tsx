@@ -12,33 +12,33 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import { createSelector, Dispatch } from "@reduxjs/toolkit";
-import { Product } from "../../../lib/types/product";
+import { Dispatch } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
+import { Product } from "../../../lib/types/product";
 import { setChosenProduct, setRestaurant } from "./slice";
-import { Member } from "../../../lib/types/member";
-import {
-  retrieveChosenProduct,
-  retrieveProducts,
-  retrieveRestaurant,
-} from "./selector";
+import { createSelector } from "reselect";
+import { retrieveChosenProduct, retrieveRestaurant } from "./selector";
 import ProductService from "../../services/ProductService";
 import MemberService from "../../services/MemberService";
+import { Member } from "../../../lib/types/member";
 import { serverApi } from "../../../lib/config";
 
-/**REDUX & SLICE  */
+// REDUX SLICE & SELECTOR
 const actionDispatch = (dispatch: Dispatch) => ({
-  setChosenProduct: (data: Product) => dispatch(setChosenProduct(data)),
   setRestaurant: (data: Member) => dispatch(setRestaurant(data)),
+  setChosenProduct: (data: Product) => dispatch(setChosenProduct(data)),
 });
-/**REDUX &  SELECTOR */
 const chosenProductRetriever = createSelector(
   retrieveChosenProduct,
-  (chosenProduct) => ({ chosenProduct }),
+  (chosenProduct) => ({
+    chosenProduct,
+  }),
 );
 const restaurantRetriever = createSelector(
   retrieveRestaurant,
-  (restaurant) => ({ restaurant }),
+  (restaurant) => ({
+    restaurant,
+  }),
 );
 
 export default function ChosenProduct() {
@@ -46,20 +46,21 @@ export default function ChosenProduct() {
   const { setRestaurant, setChosenProduct } = actionDispatch(useDispatch());
   const { chosenProduct } = useSelector(chosenProductRetriever);
   const { restaurant } = useSelector(restaurantRetriever);
+
   useEffect(() => {
     const product = new ProductService();
-
     product
       .getProduct(productId)
       .then((data) => setChosenProduct(data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
 
     const member = new MemberService();
     member
       .getRestaurant()
       .then((data) => setRestaurant(data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   }, []);
+
   if (!chosenProduct) return null;
   return (
     <div className={"chosen-product"}>
@@ -86,7 +87,7 @@ export default function ChosenProduct() {
         <Stack className={"chosen-product-info"}>
           <Box className={"info-box"}>
             <strong className={"product-name"}>
-              {chosenProduct?.productName}
+              {chosenProduct.productName}
             </strong>
             <span className={"resto-name"}>{restaurant?.memberNick}</span>
             <span className={"resto-name"}>{restaurant?.memberPhone}</span>
@@ -107,7 +108,7 @@ export default function ChosenProduct() {
             <Divider height="1" width="100%" bg="#000000" />
             <div className={"product-price"}>
               <span>Price:</span>
-              <span>{chosenProduct?.productPrice}</span>
+              <span>${chosenProduct?.productPrice}</span>
             </div>
             <div className={"button-box"}>
               <Button variant="contained">Add To Basket</Button>

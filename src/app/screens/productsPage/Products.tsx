@@ -8,22 +8,21 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { createSelector, Dispatch } from "@reduxjs/toolkit";
-import { Product, ProductInquiry } from "../../../lib/types/product";
+import { Dispatch } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { setChosenProduct, setProducts, setRestaurant } from "./slice";
-import { Member } from "../../../lib/types/member";
+import { Product, ProductInquiry } from "../../../lib/types/product";
+import { setProducts } from "./slice";
+import { createSelector } from "reselect";
 import { retrieveProducts } from "./selector";
 import ProductService from "../../services/ProductService";
 import { ProductCollection } from "../../../lib/enums/product.enum";
 import { serverApi } from "../../../lib/config";
 import { useHistory } from "react-router-dom";
 
-/**REDUX & SLICE  */
+// REDUX SLICE & SELECTOR
 const actionDispatch = (dispatch: Dispatch) => ({
   setProducts: (data: Product[]) => dispatch(setProducts(data)),
 });
-/**REDUX &  SELECTOR */
 const productsRetriever = createSelector(retrieveProducts, (products) => ({
   products,
 }));
@@ -46,7 +45,7 @@ export default function Products() {
     product
       .getProducts(productSearch)
       .then((data) => setProducts(data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   }, [productSearch]);
 
   useEffect(() => {
@@ -56,19 +55,17 @@ export default function Products() {
     }
   }, [searchText]);
 
-  //**HANDLERS */
+  // Handlers
   const searchCollectionHandler = (collection: ProductCollection) => {
     productSearch.page = 1;
     productSearch.productCollection = collection;
     setProductSearch({ ...productSearch });
-    alert(collection);
   };
 
   const searchOrderHandler = (order: string) => {
     productSearch.page = 1;
     productSearch.order = order;
     setProductSearch({ ...productSearch });
-    alert(order);
   };
 
   const searchProductHandler = () => {
@@ -81,7 +78,7 @@ export default function Products() {
     setProductSearch({ ...productSearch });
   };
 
-  const chooseDishHandler = (id: string) => {
+  const chooseDIshHandler = (id: string) => {
     history.push(`/products/${id}`);
   };
 
@@ -91,7 +88,7 @@ export default function Products() {
         <Stack flexDirection={"column"} alignItems={"center"}>
           <Stack className={"avatar-big-box"}>
             <Stack className={"top-text"}>
-              <p>Burak Restaurant</p>
+              <p>Bumarak Restaurant</p>
               <Stack className={"single-search-big-box"}>
                 <input
                   type={"search"}
@@ -120,34 +117,34 @@ export default function Products() {
             <Stack className={"dishes-filter-box"}>
               <Button
                 variant={"contained"}
+                className={"order"}
                 color={
                   productSearch.order === "createdAt" ? "primary" : "secondary"
                 }
-                className={"order"}
                 onClick={() => searchOrderHandler("createdAt")}
               >
                 New
               </Button>
               <Button
                 variant={"contained"}
+                className={"order"}
                 color={
                   productSearch.order === "productPrice"
                     ? "primary"
                     : "secondary"
                 }
-                className={"order"}
                 onClick={() => searchOrderHandler("productPrice")}
               >
                 Price
               </Button>
               <Button
                 variant={"contained"}
+                className={"order"}
                 color={
                   productSearch.order === "productViews"
                     ? "primary"
                     : "secondary"
                 }
-                className={"order"}
                 onClick={() => searchOrderHandler("productViews")}
               >
                 Views
@@ -229,17 +226,17 @@ export default function Products() {
 
             <Stack className={"product-wrapper"}>
               {products.length !== 0 ? (
-                products.map((product) => {
+                products.map((product: Product) => {
                   const imagePath = `${serverApi}/${product.productImages[0]}`;
                   const sizeVolume =
-                    product.productCollection === "DRINK"
-                      ? product.productVolume + " L"
+                    product.productCollection === ProductCollection.DRINK
+                      ? product.productVolume + "litre "
                       : product.productSize + " size";
                   return (
                     <Stack
                       key={product._id}
                       className={"product-card"}
-                      onClick={() => chooseDishHandler(product._id)}
+                      onClick={() => chooseDIshHandler(product._id)}
                     >
                       <Stack
                         className={"product-img"}
@@ -250,7 +247,6 @@ export default function Products() {
                           <img
                             src={"/icons/shopping-cart.svg"}
                             style={{ display: "flex" }}
-                            alt=""
                           />
                         </Button>
                         <Button className={"view-btn"} sx={{ right: "36px" }}>
@@ -314,16 +310,16 @@ export default function Products() {
           <Box className={"category-title"}>Our Family Brands</Box>
           <Stack className={"brand-list"}>
             <Box className={"review-box"}>
-              <img src={"/img/gurme.png"} alt="" />
+              <img src={"/img/gurme.webp"} />
             </Box>
             <Box className={"review-box"}>
-              <img src={"/img/seafood.png"} alt="" />
+              <img src={"/img/seafood.webp"} />
             </Box>
             <Box className={"review-box"}>
-              <img src={"/img/doner.png"} alt="" />
+              <img src={"/img/doner.webp"} />
             </Box>
             <Box className={"review-box"}>
-              <img src={"/img/sweets.png"} alt="" />
+              <img src={"/img/sweets.webp"} />
             </Box>
           </Stack>
         </Container>
